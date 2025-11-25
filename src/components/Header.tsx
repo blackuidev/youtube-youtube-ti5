@@ -1,25 +1,33 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Home, Info, Mail } from 'lucide-react'; // Using lucide-react for icons
 
 const Header: React.FC = () => {
   return (
-    <header className="flex items-center justify-between p-4 bg-gray-800 text-white shadow-md">
-      <div className="flex items-center gap-2">
-        <Home className="h-6 w-6" />
-        <h1 className="text-xl font-bold">My Awesome App</h1>
+    <header className="bg-gray-800 text-white p-4 shadow-md">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-2xl font-bold">
+          My Blog
+        </h1>
+        <nav>
+          <ul className="flex space-x-4">
+            <li>
+              <a href="/" className="hover:text-gray-300 transition-colors duration-200">
+                Home
+              </a>
+            </li>
+            {/* Add more navigation links here if needed */}
+            {/* <li>
+              <a href="/about" className="hover:text-gray-300 transition-colors duration-200">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="hover:text-gray-300 transition-colors duration-200">
+                Contact
+              </a>
+            </li> */}
+          </ul>
+        </nav>
       </div>
-      <nav className="flex gap-4">
-        <Button variant="ghost" className="text-white hover:bg-gray-700">
-          <Home className="h-4 w-4 mr-2" /> Home
-        </Button>
-        <Button variant="ghost" className="text-white hover:bg-gray-700">
-          <Info className="h-4 w-4 mr-2" /> About
-        </Button>
-        <Button variant="ghost" className="text-white hover:bg-gray-700">
-          <Mail className="h-4 w-4 mr-2" /> Contact
-        </Button>
-      </nav>
     </header>
   );
 };
